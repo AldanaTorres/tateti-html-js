@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="author" content="Aldana Torres" />
+    <meta name="keywords" lang="es" content="Tateti" />
+    <meta name="Description" CONTENT="TP1, Programacion Avanzada">
+
+    <title>TATETI</title>
+
+    <!--hoja de estilos-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+</head>
+
+<body>
+    <header id="header">
+        <div>
+            <h1 id="nombre">Tateti</h1>
+        </div>
+    </header>
+
+    <section id="tateti">
+
+        <div id="form">
+            <h2 class="subheader">Jugadores: </h2>
+            <form>
+                <div class="form-group">
+                    <label>Nombre jugador 1:</label>
+                    <input type="text" id="jugador1" value="" />
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre jugador 2:</label>
+                    <input type="text" id="jugador2" value="" />
+                </div>
+                <input type="button" class="boton" value="Jugar" onclick="empezar();" />
+            </form>
+
+        </div>
+        <div id="historial">
+            <h2 class="subheader">Historial</h2>
+            <label id="ganados1"></label><br>
+            <label id="ganados2"></label><br>
+            <label id="empate"></label><br>
+            <input type="button" class="boton" value="Restablecer" onclick="cargarForm();">
+        </div>
+
+
+
+        <div id="mensaje">
+            <label id="mostrarMensaje"></label><br>
+            <input type="button" value="Ok" class="boton" onclick="siguienteJuego();">
+        </div>
+
+
+        <div id="juego">
+            <h2 class="subheader">Tablero</h2>
+            <label id="turno"></label>
+            <div id="tablero">
+                <input type="button" id="00" onclick="llenarTablero(this);">
+                <input type="button" id="01" onclick="llenarTablero(this);">
+                <input type="button" id="02" onclick="llenarTablero(this);"><br>
+
+                <input type="button" id="10" onclick="llenarTablero(this);">
+                <input type="button" id="11" onclick="llenarTablero(this);">
+                <input type="button" id="12" onclick="llenarTablero(this);"><br>
+
+                <input type="button" id="20" onclick="llenarTablero(this);">
+                <input type="button" id="21" onclick="llenarTablero(this);">
+                <input type="button" id="22" onclick="llenarTablero(this);"><br>
+
+            </div>
+
+        </div>
+
+
+    </section>
+    <script type="text/javascript" src="tateti.js"></script>
+</body>
+<footer id="footer">
+    <div>
+        Aldana Torres, Programación Avanzada 2020
+    </div>
+</footer>
+
+</html>
