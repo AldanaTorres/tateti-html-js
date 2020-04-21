@@ -1,0 +1,9 @@
+<div id="historial">
+            <h2>Historial</h2>
+            <ol>
+                <li>Juegos ganados por :</li>
+                <li>Juegos ganados por :</li>
+                <li>Empates:</li>
+            </ol>
+            <button>Restablecer</button>
+        </div>

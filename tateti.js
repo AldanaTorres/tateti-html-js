@@ -6,7 +6,7 @@ var empate = 0;
 var turno = 0;
 var tablero = new Array();
 
-
+//boton restablecer
 function cargarForm() {
     document.getElementById("form").style.display = "inline-block";
     document.getElementById("historial").style.display = "none";
@@ -19,6 +19,7 @@ function cargarForm() {
 
 }
 
+//boton jugar
 function empezar() {
     //mostrar el tablero
     document.getElementById("juego").style.display = "inline-block";
@@ -50,6 +51,7 @@ function empezar() {
         "Es tu turno: " + jugador1;
 }
 
+//boton ok
 function siguienteJuego() {
     document.getElementById("historial").style.display = "inline-block";
     document.getElementById("mensaje").style.display = "none";
@@ -101,8 +103,7 @@ function resultado() {
 
         document.getElementById("historial").style.display = "none";
 
-    }
-    if ((tablero[0].value == "O" && tablero[1].value == "O" && tablero[2].value == "O") ||
+    } else if ((tablero[0].value == "O" && tablero[1].value == "O" && tablero[2].value == "O") ||
         (tablero[3].value == "O" && tablero[4].value == "O" && tablero[5].value == "O") ||
         (tablero[6].value == "O" && tablero[7].value == "O" && tablero[8].value == "O") ||
         (tablero[0].value == "O" && tablero[3].value == "O" && tablero[6].value == "O") ||
@@ -125,9 +126,7 @@ function resultado() {
             "Juegos empatados: " + empate;
 
         document.getElementById("historial").style.display = "none";
-    }
-
-    if (tablero[0].value !== " " && tablero[1].value !== " " && tablero[2].value !== " " &&
+    } else if (tablero[0].value !== " " && tablero[1].value !== " " && tablero[2].value !== " " &&
         tablero[3].value !== " " && tablero[4].value !== " " && tablero[5].value !== " " &&
         tablero[6].value !== " " && tablero[7].value !== " " && tablero[8].value !== " ") {
         document.getElementById("mensaje").style.display = "inline-block";
